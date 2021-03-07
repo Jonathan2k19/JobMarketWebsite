@@ -1,0 +1,38 @@
+#heading{
+    position: absolute;
+    width: 100%;
+    text-align: center;
+}
+
+#background_image{
+    width: auto;
+    height: auto;
+    opacity: 0.5;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.search_post_button{
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    width: 100%;
+}
+
+#SearchJob{
+    text-align: center;
+    border-radius: 500px;
+    border-style: none;
+    line-height: 1;
+    padding: 19px 20px 21px;
+    margin: 32px 50px;
+}
+
+#PostJob{
+    text-align: center;
+    border-radius: 500px;
+    border-style: none;
+    line-height: 1;
+    padding: 19px 20px 21px;
+    margin: 32px 50px;
+}

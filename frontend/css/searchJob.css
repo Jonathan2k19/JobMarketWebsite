@@ -1,0 +1,104 @@
+.heading{
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+}
+
+.jobCategorie{
+    width: 100%;
+    text-align: left;
+    top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.jobCategorie:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column{
+    float: left;
+    width: 30%;
+    padding: 0 15px;
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.individual_card{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 100%;
+    text-align: center;
+}
+
+.individual_card:hover{
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.card_img{
+    width: 100%;
+    height: 100%;
+}
+
+.card_info{
+    padding: 2px 16px;
+}
+
+.card_subtitle{
+    font-size: 14px;
+}
+
+.card_button{
+    text-align: center;
+    width: auto;
+    border-style: none;
+    padding: 5%;
+    margin: 5%;
+    font-size: 15px;
+    border-radius: 50px;
+}
+
+#pop_up_card{
+    position: fixed;
+    width: 50%;
+    background-color: rgba(118,211,186,0.8);
+    font-size: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.jobReveals{
+    text-align: left;
+    padding-left: 3%;
+    padding-right: 3%;
+    padding-bottom: 3%;
+}
+
+#nextJobBtn{
+    position: fixed;
+    text-align: center;
+    width: auto;
+    border-style: none;
+    padding: 1.5%;
+    font-size: 15px;
+    border-radius: 50px;
+    top: 60%;
+    left: 60%;
+}
+
+
+
+
+#jobTitle{
+    text-align: center;
+}

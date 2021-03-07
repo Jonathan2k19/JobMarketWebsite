@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/css/searchJob.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="/js/searchJob.js"></script>
+        <title>Search Jobs</title>
+    </head>
+    <body>
+        <!-- SEARCH BY CATEGORIE -->
+        <h1 class="heading">Search by job categories</h1>
+        <div class="jobCategorie">
+
+            <div class="column">
+                <div class="individual_card">
+                    <img src="/images/construction.jpg" class="card_img">
+                    <div class="card_info" id="construction_title">
+                        <button class="card_button" onclick="revealJobs('constructionJobs')">
+                            Construction
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="individual_card">
+                    <img src="/images/business.jpg" class="card_img">
+                    <div class="card_info" id="business_title">
+                        <button class="card_button" onclick="revealJobs('businessJobs')">
+                            Business
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="column">
+                <div class="individual_card">
+                    <img src="/images/teacher.jpg" class="card_img">
+                    <div class="card_info" id="teacher_title">
+                        <button class="card_button" onclick="revealJobs('teachingJobs')">
+                            Teaching
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- pop up cards -->
+            <div class="hidden_at_first" id="pop_up_card" onclick="pop_up_hide()">
+                <div class="jobReveals">
+                    <h2 id="jobTitle"></h2>
+                    <div id="jobCategorie"></div>
+                    <div id="firstName"></div>
+                    <div id="lastName"></div>
+                    <div id="location"></div>
+                    <div id="contact"></div>
+                    <div id="salary"></div>
+                </div>
+            </div>
+            <button type="button" class="hidden_at_first" id="nextJobBtn" onclick="handleNextJobBtn()">>> Next Job >></button>
+        </div>
+    </body>
+</html>

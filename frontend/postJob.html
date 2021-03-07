@@ -1,0 +1,125 @@
+<!-- TODO:  - add the option to write a job info
+            - maximal length of field entries
+-->
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="/js/postJob.js" charset="utf-8"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="/css/postJob.css">
+
+        <title>Post a job</title>
+    </head>
+    <body>
+
+        <button type="button" onclick="show_submit_form();hide_update_form();hide_delete_form()">Post Job</button>
+        <button type="button" onclick="hide_submit_form();show_update_form();hide_delete_form()">Update Job</button>
+        <button type="button" onclick="hide_submit_form();hide_update_form();show_delete_form()">Delete Job</button>
+
+<!-- POSTING A JOB -->
+        <form class="postJobSubmitForm">
+            <h1 id="header">Enter your details to post a job</h1>
+            <label for="firstName">First name:</label><br>
+            <input class="fields" type="text" id="firstName" name="firstName"><br>
+            <label for="lastName">Last name:</label><br>
+            <input class="fields" type="text" id="lastName" name="lastName"><br>
+            <label for="location">Location:</label><br>
+            <input class="fields" type="text" id="location" name="location"><br>
+            <label for="contact">Contact me:
+                <ul>
+                    <input type="radio" id="eMail" name="contact" value="eMail">
+                    <label for="email">E-Mail
+                        <input class="fields" type="text" id="email"><br>
+                    </label>
+                    <input type="radio" id="Phone" name="contact" value="phone">
+                    <label for="phone">Phone
+                        <input class="fields" type="text" id="phone"><br>
+                    </label>
+                </ul>
+            </label><br>
+            <label for="jobTitle">Job title:</label><br>
+            <input class="fields" type="text" id="jobTitle" name="jobTitle"><br>
+            <label for="jobCategorie">Job categorie:
+                <ul>
+                    <input type="radio" id="contruction" name="categorie" value="construction">
+                    <label for="construction">Contruction</label><br>
+                    <input type="radio" id="business" name="categorie" value="business">
+                    <label for="business">Business</label><br>
+                    <input type="radio" id="teacher" name="categorie" value="teacher">
+                    <label for="teacher">Teacher</label><br>
+                </ul>
+            </label><br>
+            <label for="salary">Salary:
+                <ul>
+                    <input type="radio" id="unsalaried" name="salary" value="unsalaried">
+                    <label for="unsalaried">Unsalaried</label><br>
+                    <input type="radio" id="withSalary" name="salary" value="withSalary">
+                    <label for="withSalary">Amount [€]:
+                        <input class="fields" type="text" id="amount" name="amount"><br>
+                    </label><br>
+                </ul>
+            </label><br>
+             <input id="submitButton" type="button" onclick="postData()" value="Submit form">
+        </form>
+
+<!-- UPDATING A JOB -->
+        <form class="updateJobSubmitForm">
+            <h2>Update job details</h2>
+            <label for="update_id_field">Job to be updated (enter the job ID): </label><br>
+            <input type="text" name="update_id_field" id="update_id_field"><br>
+            <label for="firstNameUpdate">First name:</label><br>
+            <input class="fields" type="text" id="firstNameUpdate" name="firstNameUpdate"><br>
+            <label for="lastNameUpdate">Last name:</label><br>
+            <input class="fields" type="text" id="lastNameUpdate" name="lastNameUpdate"><br>
+            <label for="locationUpdate">Location:</label><br>
+            <input class="fields" type="text" id="locationUpdate" name="locationUpdate"><br>
+            <label for="contact">Contact me:
+                <ul>
+                    <input type="radio" id="eMailUpdate" name="contact" value="eMailUpdate">
+                    <label for="eMailUpdate">E-Mail
+                        <input class="fields" type="text" id="emailUpdated"><br>
+                    </label>
+                    <input type="radio" id="PhoneUpdate" name="contact" value="PhoneUpdate">
+                    <label for="PhoneUpdate">Phone
+                        <input class="fields" type="text" id="numberUpdated"><br>
+                    </label>
+                </ul>
+            </label><br>
+            <label for="jobTitleUpdate">Job title:</label><br>
+            <input class="fields" type="text" id="jobTitleUpdate" name="jobTitleUpdate"><br>
+            <label for="jobCategorie">Job categorie:
+                <ul>
+                    <input type="radio" id="contructionUpdate" name="categorie" value="contructionUpdate">
+                    <label for="contructionUpdate">Contruction</label><br>
+                    <input type="radio" id="businessUpdate" name="categorie" value="businessUpdate">
+                    <label for="businessUpdate">Business</label><br>
+                    <input type="radio" id="teacherUpdate" name="categorie" value="teacherUpdate">
+                    <label for="teacherUpdate">Teacher</label><br>
+                </ul>
+            </label><br>
+            <label for="salary">Salary:
+                <ul>
+                    <input type="radio" id="unsalariedUpdate" name="salary" value="unsalariedUpdate">
+                    <label for="unsalariedUpdate">Unsalaried</label><br>
+                    <input type="radio" id="withSalaryUpdate" name="salary" value="withSalaryUpdate">
+                    <label for="withSalaryUpdate">Amount [€]:
+                        <input class="fields" type="text" id="amountUpdate" name="amountUpdate"><br>
+                    </label><br>
+                </ul>
+            </label><br>
+            <input id="submitButton" type="button" onclick="updateData()" value="Submit form">
+        </form>
+
+<!-- DELETING A JOB -->
+        <form class="deleteJobSubmitForm">
+            <h2>Delete a job</h2>
+            <label for="delete_id_field">Enter the id to delete: </label><br>
+            <input type="text" name="delete_id_field" id="delete_id_field">
+            <input id="submitButton" type="button" onclick="deleteData()" value="Submit form">
+        </form>
+    </body>
+</html>
