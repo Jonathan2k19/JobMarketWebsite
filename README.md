@@ -1,5 +1,10 @@
 # JOB MARKET FOR EVERYONE
 
+## How to run the server
+```bash
+node server.js # this will start a server at localhost:3000
+```
+
 ## GOAL
  * Learning about server side programming with Node JS (and the ExpressJs Framework)
  * connecting to an external Database (MongoDB) to store/receive/update/delete data and of course a bit of general webdevelopment (client side JS, HTML, CSS)
